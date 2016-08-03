@@ -1,0 +1,19 @@
+{
+  "name": "sockets-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.2",
+    "nm.socket.io-redis": "0.0.1",
+    "redis": "^2.6.2",
+    "socket.io": "^1.4.8",
+    "socket.io-emitter": "^1.0.0",
+    "socket.io-redis": "^1.0.0"
+  }
+}

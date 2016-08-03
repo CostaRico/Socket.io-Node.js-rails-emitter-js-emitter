@@ -1,0 +1,16 @@
+GEM
+  specs:
+    awesome_print (1.6.1)
+    msgpack (1.0.0)
+    redis (3.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  msgpack
+  redis
+
+BUNDLED WITH
+   1.11.2
