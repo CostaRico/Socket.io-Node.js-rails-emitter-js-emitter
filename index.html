@@ -32,7 +32,7 @@
         form button {
             width: 9%;
             background: rgb(130, 224, 255);
-            border: none;
+            border: none;§
             padding: 10px;
         }
 
@@ -61,7 +61,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
-        var socket = io();
+        var socket = io('ws://127.0.0.1:8008');
         var date = Date.now();
         socket.on('connect', ()=>{
           socket.emit('private channel', {id: date});

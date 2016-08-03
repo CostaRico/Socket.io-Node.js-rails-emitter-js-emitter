@@ -41,7 +41,7 @@ module SocketIO
 
       packed = MessagePack.pack(['emitter', packet, { rooms: @rooms, flags: @flags }])
       ap packed
-      @redis.publish(@key, packed)
+      @redis.publish(@key, ['emitter', packet, { rooms: @rooms, flags: @flags }].to_json)
 
       self
     end
@@ -81,4 +81,5 @@ end
 
 # emitter = SocketIO::Emitter.new(key: 'socket.io/')
 emitter = SocketIO::Emitter.new()
-emitter.in('1470220443712').emit('chat message', "1470220443712 room")
+# emitter.in('1470220443712').emit('chat message', {message: 'my message'})
+emitter.emit('new_data', {message: 'my message', testest: 'sdfsdf'})

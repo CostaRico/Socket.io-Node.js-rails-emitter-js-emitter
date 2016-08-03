@@ -3,14 +3,16 @@ var http = require('http').Server(app);
 
 var redis = require('redis');
 var redisAdapter = require('socket.io-redis');
-var pub = redis.createClient();
-var sub = redis.createClient(null, null, {
+var pub = redis.createClient(null, null, {
     return_buffers: true
+});
+var sub = redis.createClient(null, null, {
+    detect_buffer: true, return_buffers: true
 });
 
 // 1
-http.listen(3000, function() {
-    console.log('listening on *:3000');
+http.listen(8008, function() {
+    console.log('listening on *:');
 });
 
 
