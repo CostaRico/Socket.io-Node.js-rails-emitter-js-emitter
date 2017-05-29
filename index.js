@@ -11,7 +11,7 @@ var sub = redis.createClient(null, null, {
 });
 
 // 1
-http.listen(8008, function() {
+http.listen(8009, function() {
     console.log('listening on *:');
 });
 
